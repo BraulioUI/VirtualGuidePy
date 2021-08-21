@@ -105,6 +105,7 @@ class TouristicPlaceById(APIView):
         simExpSer = NearbyPlaceSerializer(simExpFinal, many=True)
 
         response.data = {
+            'id': touristicPlace.touristicplace_id,
             'pictures': picturesSerializer.data,
             'name': touristicPlace.name,
             'long_info': touristicPlace.long_info,
